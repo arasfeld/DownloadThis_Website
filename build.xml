@@ -1,0 +1,40 @@
+<project name="DownloadThis" basedir="." default="build">
+
+    <property name="src.dir"     value="src"/>
+    <property name="build.dir"   value="build"/>
+    <property name="webinf.dir"   value="WEB-INF"/>
+    <property name="classes.dir" value="${webinf.dir}/classes"/>
+    <property name="war.dir"     value="${build.dir}/war"/>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+	<delete dir="${classes.dir}"/>
+    </target>
+
+    <target name="compile">
+	<mkdir dir="${webinf.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}"/>
+    </target>
+
+    <target name="war" depends="compile">
+        <mkdir dir="${war.dir}"/>
+	<war destfile="${war.dir}/${ant.project.name}.war" webxml="./web.xml">
+	<fileset dir="./jsp"/>
+	<classes dir="${classes.dir}"/>
+	<zipfileset dir="./images" prefix="images"/>
+	</war>
+    </target>
+
+    <target name="run" depends="war">
+        <java jar="${war.dir}/${ant.project.name}.war" fork="true"/>
+    </target>
+
+    <target name="clean-build" depends="clean,war"/>
+
+    <target name="main" depends="clean,run"/>
+
+    <target name="deploy" description="deploy to tomcat server">
+	<copy file="build/war/DownloadThis.war" todir="/usr/share/tomcat6-201-f12/webapps/"/>
+    </target>
+</project>

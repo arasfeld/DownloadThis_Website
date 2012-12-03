@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+body {
+	height:100%;
+	background-image:url("./images/gradient.jpg");
+	text-align:center;
+}
+
+a {
+	text-decoration: underline;
+	color:#F6C;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #F6C;
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	border-top-color: rgb(255,130,255);
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+	border-bottom-color: rgb(255,130,255);
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	text-decoration: none;
+	background-color: rgba(255,255,102,.8);
+}
+
+.container {
+	width: 80%;
+	height:100%;
+	max-width: 1260px;
+	min-width: 780px;
+	background-color: rbga(255,255,255,.8);
+	margin: 0 auto;
+}
+
+.header {
+	background-color: rgba(255,130,255,.8);
+	text-align:left center;
+	min-height: 180px;
+	height:100%;
+	margin: 0 auto;
+	-moz-border-radius-topleft: 50px;
+	-moz-border-radius-topright: 50px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+}
+
+.header h1 span {
+	color:#FFF;
+}
+
+.sidebar {
+	float: left;
+	width: 20%;
+	height: 100%;
+}
+
+.navbar {
+	float: left;
+	width: 20%;
+	height: 100%;
+	background-color: rgba(255,255,102,.8);
+}
+
+.navbardivider {
+	height: 50px;
+}
+
+.content {
+	float: left;
+    	width: 80%;
+    	height: 100%;
+    	background-color: rgba(238,233,233,.8);
+    	text-align: left;
+    	padding: 10px 0;
+}
+
+.page {
+	float: left;
+	width: 100%;
+	background-color: rgba(238,233,233,.8);
+	text-align:center;
+	padding: 10px 0;
+}
+
+.footer {
+	background-color: rgba(255,130,255,.8);
+	margin: 0 auto;
+	padding: 20px 0 20px 0;
+	border:1px solid pink;
+	color:#FFFF33;
+	position: relative;
+	clear: both;
+	-moz-border-radius-bottomleft: 50px;
+	-moz-border-radius-bottomright: 50px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+
+#Pink {
+	color:#FFFF33;
+	margin:auto;
+	text-align:center;
+	width:90%;
+	background-color:rgba(255,130,255,.6);
+}
+
+p#status {
+	color: red;
+       font-family:"Times New Roman";
+       font-size:20px;
+}
+
+h1 {
+	font-size:60px;
+	color: #FFFF33;
+}
+
+h2 {
+	text-align:center;
+	font-size:60px;
+	color: #000000;
+}
+
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+label {
+	width: 7em;
+	float: left;
+	text-align: right;
+	margin-right: 0.5em;
+	display: block
+}
+
+table,th,td {
+	margin-left: auto;
+	margin-right: auto;
+	border:1px solid pink;
+}
+
+th {
+	background-color:rgba(255,130,255,.6);
+	color:white;
+}
+
+td {
+	height:100%;
+	text-align: center;
+}
+
+tr {
+	valign="top";
+}
+
+tr:nth-child(even) {
+	background-color:rgba(238,233,233,.8);
+}
+
+tr:nth-child(odd) {
+	background-color:rgba(255,153,204,.8);
+}
